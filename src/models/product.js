@@ -95,7 +95,7 @@ const getProductsByCategory = async (category) => {
             id: row.id,
             name: row.name,
             description: row.description,
-            release_date: row.release_date ? row.release_date.toISOString() : null,
+            release_date: row.release_date,
             prices: {
                 discount: row.discount,
                 old: parseFloat(row.old),
