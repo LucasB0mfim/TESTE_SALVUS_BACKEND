@@ -4,7 +4,6 @@ const cors = require('cors'); // Importe o pacote cors
 const app = express();
 const productsRoute = require('./routes/products');
 
-// Configure o middleware cors para permitir solicitações de outras origens
 app.use(cors());
 
 app.use(express.json());
