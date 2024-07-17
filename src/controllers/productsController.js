@@ -56,10 +56,20 @@ const getRandomDiscountedProduct = async (req, res) => {
     }
 };
 
+const getUpcomingProducts = async (req, res) => {
+    try {
+        const products = await Product.getUpcomingProducts();
+        res.json(products);
+    } catch (error) {
+        res.status(500).json({ error: error.message, result: [] });
+    }
+};
+
 module.exports = {
     getProducts,
     getProductsByCategory,
     getProductById,
     getDiscountedProducts,
-    getRandomDiscountedProduct
+    getRandomDiscountedProduct,
+    getUpcomingProducts
 };
