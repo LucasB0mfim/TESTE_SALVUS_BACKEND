@@ -158,7 +158,7 @@ const getProductById = async (id) => {
             id: row.id,
             name: row.name,
             description: row.description,
-            release_date: row.release_date ? row.release_date.toISOString() : null,
+            release_date: row.release_date || null,
             prices: {
                 discount: row.discount,
                 old: parseFloat(row.old),
