@@ -360,7 +360,6 @@ const updateProduct = async (id, product) => {
             throw new Error('Produto não encontrado');
         }
 
-        // Mesclar dados existentes com novos dados fornecidos
         const updatedProduct = {
             ...existingProduct,
             ...product,
